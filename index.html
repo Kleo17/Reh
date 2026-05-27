@@ -1,103 +1,361 @@
-<chen aus Eis. Sie zeigen oft eine stabile Luftschichtung und wirken leicht „marmoriert“.</p>
-            </article>
-            <article class="card">
-              <p class="level">über 6.000 m</p>
-              <h3>Cirrostratus</h3>
-              <p>Eine dünne, veilartige Wolkenschicht. Sie kann den Sonnen- oder Mondhalo erklären und kündigt häufig eine Wetterfront an.</p>
-            </article>
-          </div>
-        </div>
-
-        <div class="height-group">
-          <h2>Mittel</h2>
-          <div class="cards">
-            <article class="card">
-              <p class="level">2.000–6.000 m</p>
-              <h3>Altocumulus</h3>
-              <p>Flache, klumpige Wolken in Reihen oder Wellen. Sie sind häufig mit Luftströmungen verbunden und können auf wechselhaftes Wetter hindeuten.</p>
-            </article>
-            <article class="card">
-              <p class="level">2.000–6.000 m</p>
-              <h3>Altostratus</h3>
-              <p>Eine graue bis blaugraue Schicht, die Sonne nur schwach durchscheinen lässt. Sie steht oft für anhaltenden, gleichmäßigen Niederschlag.</p>
-            </article>
-          </div>
-        </div>
-
-        <div class="height-group">
-          <h2>Niedrig</h2>
-          <div class="cards">
-            <article class="card">
-              <p class="level">unter 2.000 m</p>
-              <h3>Stratocumulus</h3>
-              <p>Breite, abgerundete Wolkenfelder mit dunkleren Stellen. Sie bringen oft bedeckten Himmel, aber meist nur wenig Niederschlag.</p>
-            </article>
-            <article class="card">
-              <p class="level">unter 2.000 m</p>
-              <h3>Stratus</h3>
-              <p>Flache, graue Wolkenschichten ohne klare Form. Typisch für trübes Wetter, Niesel oder gleichmäßige Bewölkung.</p>
-            </article>
-            <article class="card">
-              <p class="level">unter 2.000 m</p>
-              <h3>Nimbostratus</h3>
-              <p>Dicke, graue Wolken, die langanhaltenden Regen oder Schnee erzeugen. Sie sind ein klassisches Zeichen für anhaltendes schlechtes Wetter.</p>
-            </article>
-          </div>
-        </div>
-
-        <div class="height-group">
-          <h2>Vertikal / aufragend</h2>
-          <div class="cards">
-            <article class="card">
-              <p class="level">von unten bis über 10.000 m</p>
-              <h3>Cumulus</h3>
-              <p>Hübsch abgerundete, weiße Wolken mit sauberer Kuppe. Sie stehen häufig für gutes Wetter und lokale Aufwinde.</p>
-            </article>
-            <article class="card">
-              <p class="level">von unten bis über 10.000 m</p>
-              <h3>Cumulonimbus</h3>
-              <p>Hoch aufragende, gewaltige Wolken mit dunkler Basis. Sie stehen für Gewitter, Starkregen, Hagel oder Schauer.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-    </main>
-  </body>
-</html>
-!doctype html>
+<!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Wolkenarten</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="sky">
-      <div class="cloud cloud-a"></div>
-      <div class="cloud cloud-b"></div>
-      <div class="cloud cloud-c"></div>
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wolkenarten</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-    <main class="page-shell">
-      <section class="hero">
-        <p class="eyebrow">Natur · Wetter · Wissen</p>
-        <h1>Wolkenarten</h1>
-        <p class="intro">
-          Die zehn bekanntesten Wolkenarten nach Höhe geordnet – mit einer kurzen Erklärung, was jede Wolke bedeutet.
-        </p>
-      </section>
+  <div class="background">
+    <div class="sun"></div>
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="cloud cloud3"></div>
+  </div>
 
-      <section class="cloud-grid">
-        <div class="height-group">
-          <h2>Hoch</h2>
-          <div class="cards">
-            <article class="card">
-              <p class="level">über 6.000 m</p>
-              <h3>Cirrus</h3>
-              <p>Feine, faserige Wolken aus Eis. Sie deuten oft auf gutes Wetter hin, können aber auch ein Zeichen für kommende Wetteränderungen sein.</p>
-            </article>
-            <article class="card">
-              <p class="level">über 6.000 m</p>
-              <h3>Cirrocumulus</h3>
-              <p>Kleine, wellige Schüpp
+  <header class="hero">
+    <p class="eyebrow">Natur · Wetter · Atmosphäre</p>
+    <h1>Die Welt der Wolken</h1>
+    <p>
+      Entdecke die zehn wichtigsten Wolkenarten, ihre Höhe und was sie über das Wetter verraten.
+    </p>
+    <button onclick="scrollToClouds()">Wolken entdecken</button>
+  </header>
+
+  <main id="clouds" class="container">
+
+    <section class="height-group">
+      <h2>Hohe Wolken</h2>
+      <div class="cards">
+        <article class="card">
+          <span>über 6.000 m</span>
+          <h3>Cirrus</h3>
+          <p>Feine, faserige Eiswolken. Sie wirken oft wie Federn und können eine Wetteränderung ankündigen.</p>
+        </article>
+
+        <article class="card">
+          <span>über 6.000 m</span>
+          <h3>Cirrocumulus</h3>
+          <p>Kleine, schuppenartige Wolken. Sie sehen manchmal wie ein Fischschuppenmuster aus.</p>
+        </article>
+
+        <article class="card">
+          <span>über 6.000 m</span>
+          <h3>Cirrostratus</h3>
+          <p>Ein dünner Wolkenschleier. Oft entsteht dadurch ein Halo um Sonne oder Mond.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="height-group">
+      <h2>Mittelhohe Wolken</h2>
+      <div class="cards">
+        <article class="card">
+          <span>2.000–6.000 m</span>
+          <h3>Altocumulus</h3>
+          <p>Klumpige Wolken in Wellen oder Reihen. Sie können auf wechselhaftes Wetter hindeuten.</p>
+        </article>
+
+        <article class="card">
+          <span>2.000–6.000 m</span>
+          <h3>Altostratus</h3>
+          <p>Eine graublaue Wolkenschicht. Die Sonne scheint nur schwach hindurch.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="height-group">
+      <h2>Niedrige Wolken</h2>
+      <div class="cards">
+        <article class="card">
+          <span>unter 2.000 m</span>
+          <h3>Stratus</h3>
+          <p>Flache, graue Schichtwolken. Sie bringen oft trübes Wetter und Nieselregen.</p>
+        </article>
+
+        <article class="card">
+          <span>unter 2.000 m</span>
+          <h3>Stratocumulus</h3>
+          <p>Breite Wolkenfelder mit dunklen Stellen. Meist fällt nur wenig Niederschlag.</p>
+        </article>
+
+        <article class="card">
+          <span>unter 2.000 m</span>
+          <h3>Nimbostratus</h3>
+          <p>Dicke Regenwolken. Sie bringen häufig langanhaltenden Regen oder Schnee.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="height-group">
+      <h2>Vertikale Wolken</h2>
+      <div class="cards">
+        <article class="card special">
+          <span>bis über 10.000 m</span>
+          <h3>Cumulus</h3>
+          <p>Weiße Haufenwolken mit klaren Konturen. Sie stehen oft für schönes Wetter.</p>
+        </article>
+
+        <article class="card storm">
+          <span>bis über 12.000 m</span>
+          <h3>Cumulonimbus</h3>
+          <p>Gewaltige Gewitterwolken. Sie können Starkregen, Hagel, Blitz und Donner bringen.</p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Wolkenarten einfach erklärt · Wetterkunde</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(180deg, #6ec6ff, #dff6ff 45%, #f8fbff);
+  color: #1d3557;
+  overflow-x: hidden;
+}
+
+.background {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.sun {
+  position: absolute;
+  top: 70px;
+  right: 120px;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, #fff176, #ffb703);
+  border-radius: 50%;
+  box-shadow: 0 0 60px #ffd166;
+  animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+
+.cloud {
+  position: absolute;
+  width: 180px;
+  height: 60px;
+  background: white;
+  border-radius: 50px;
+  opacity: 0.75;
+  animation: moveClouds 25s linear infinite;
+}
+
+.cloud::before,
+.cloud::after {
+  content: "";
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+}
+
+.cloud::before {
+  width: 90px;
+  height: 90px;
+  top: -45px;
+  left: 30px;
+}
+
+.cloud::after {
+  width: 70px;
+  height: 70px;
+  top: -30px;
+  right: 35px;
+}
+
+.cloud1 {
+  top: 160px;
+  left: -200px;
+}
+
+.cloud2 {
+  top: 320px;
+  left: -300px;
+  animation-duration: 35s;
+  transform: scale(0.8);
+}
+
+.cloud3 {
+  top: 520px;
+  left: -250px;
+  animation-duration: 45s;
+  transform: scale(1.2);
+}
+
+@keyframes moveClouds {
+  from { transform: translateX(-250px); }
+  to { transform: translateX(130vw); }
+}
+
+.hero {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 10%;
+}
+
+.eyebrow {
+  color: #0077b6;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 8vw, 7rem);
+  color: white;
+  text-shadow: 0 8px 30px rgba(0,0,0,0.25);
+}
+
+.hero p {
+  max-width: 650px;
+  font-size: 1.3rem;
+  margin: 20px 0;
+}
+
+button {
+  width: fit-content;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 999px;
+  background: #023e8a;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #0077b6;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.container {
+  width: min(1100px, 90%);
+  margin: auto;
+}
+
+.height-group {
+  margin-bottom: 80px;
+}
+
+.height-group h2 {
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  color: #023e8a;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(12px);
+  padding: 28px;
+  border-radius: 25px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+  transition: 0.35s;
+  border: 1px solid rgba(255,255,255,0.8);
+}
+
+.card:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 25px 45px rgba(0,0,0,0.2);
+}
+
+.card span {
+  display: inline-block;
+  background: #caf0f8;
+  color: #0077b6;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  color: #03045e;
+}
+
+.card p {
+  line-height: 1.6;
+}
+
+.special {
+  background: linear-gradient(135deg, #ffffff, #bde0fe);
+}
+
+.storm {
+  background: linear-gradient(135deg, #dee2e6, #495057);
+  color: white;
+}
+
+.storm h3,
+.storm span {
+  color: white;
+}
+
+.storm span {
+  background: rgba(255,255,255,0.25);
+}
+
+footer {
+  text-align: center;
+  padding: 40px;
+  background: #023e8a;
+  color: white;
+}
+function scrollToClouds() {
+  document.getElementById("clouds").scrollIntoView({
+    behavior: "smooth"
+  });
+}
+
+const cards = document.querySelectorAll(".card");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = "1";
+      entry.target.style.transform = "translateY(0)";
+    }
+  });
+}, {
+  threshold: 0.2
+});
+
+cards.forEach(card => {
+  card.style.opacity = "0";
+  card.style.transform = "translateY(40px)";
+  card.style.transition = "0.8s ease";
+  observer.observe(card);
+});
