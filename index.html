@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wolkenarten</title>
+  <title>Wolkenarten - Wetter erleben</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <div class="background">
+    <div class="stars"></div>
     <div class="sun"></div>
     <div class="cloud cloud1"></div>
     <div class="cloud cloud2"></div>
@@ -16,100 +17,155 @@
   </div>
 
   <header class="hero">
-    <p class="eyebrow">Natur · Wetter · Atmosphäre</p>
-    <h1>Die Welt der Wolken</h1>
-    <p>
-      Entdecke die zehn wichtigsten Wolkenarten, ihre Höhe und was sie über das Wetter verraten.
-    </p>
-    <button onclick="scrollToClouds()">Wolken entdecken</button>
+    <div class="hero-content">
+      <p class="eyebrow">🌍 Natur · 🌤️ Wetter · ☁️ Atmosphäre</p>
+      <h1>Die Welt der Wolken</h1>
+      <p>
+        Entdecke die zehn wichtigsten Wolkenarten, ihre Höhe und was sie über das Wetter verraten.
+      </p>
+      <button class="btn-primary" onclick="scrollToClouds()">☁️ Wolken entdecken</button>
+    </div>
   </header>
 
   <main id="clouds" class="container">
 
     <section class="height-group">
-      <h2>Hohe Wolken</h2>
+      <div class="group-header">
+        <h2>🔼 Hohe Wolken</h2>
+        <p class="group-desc">Über 6.000 Meter - Eiskristalle in der Höhe</p>
+      </div>
       <div class="cards">
         <article class="card">
+          <div class="card-icon">❄️</div>
           <span>über 6.000 m</span>
           <h3>Cirrus</h3>
           <p>Feine, faserige Eiswolken. Sie wirken oft wie Federn und können eine Wetteränderung ankündigen.</p>
+          <div class="card-footer">Eiskristalle</div>
         </article>
 
         <article class="card">
+          <div class="card-icon">❄️🌊</div>
           <span>über 6.000 m</span>
           <h3>Cirrocumulus</h3>
           <p>Kleine, schuppenartige Wolken. Sie sehen manchmal wie ein Fischschuppenmuster aus.</p>
+          <div class="card-footer">Wellige Struktur</div>
         </article>
 
         <article class="card">
+          <div class="card-icon">🌫️</div>
           <span>über 6.000 m</span>
           <h3>Cirrostratus</h3>
           <p>Ein dünner Wolkenschleier. Oft entsteht dadurch ein Halo um Sonne oder Mond.</p>
+          <div class="card-footer">Mit Halo-Ring</div>
         </article>
       </div>
     </section>
 
     <section class="height-group">
-      <h2>Mittelhohe Wolken</h2>
+      <div class="group-header">
+        <h2>↔️ Mittelhohe Wolken</h2>
+        <p class="group-desc">2.000–6.000 Meter - Gemischte Wassertröpfchen und Eiskristalle</p>
+      </div>
       <div class="cards">
         <article class="card">
+          <div class="card-icon">☁️</div>
           <span>2.000–6.000 m</span>
           <h3>Altocumulus</h3>
           <p>Klumpige Wolken in Wellen oder Reihen. Sie können auf wechselhaftes Wetter hindeuten.</p>
+          <div class="card-footer">Wechselhaft</div>
         </article>
 
         <article class="card">
+          <div class="card-icon">🌥️</div>
           <span>2.000–6.000 m</span>
           <h3>Altostratus</h3>
           <p>Eine graublaue Wolkenschicht. Die Sonne scheint nur schwach hindurch.</p>
+          <div class="card-footer">Grauschicht</div>
         </article>
       </div>
     </section>
 
     <section class="height-group">
-      <h2>Niedrige Wolken</h2>
+      <div class="group-header">
+        <h2>⬇️ Niedrige Wolken</h2>
+        <p class="group-desc">Unter 2.000 Meter - Wassertröpfchen und Regen</p>
+      </div>
       <div class="cards">
         <article class="card">
+          <div class="card-icon">☁️</div>
           <span>unter 2.000 m</span>
           <h3>Stratus</h3>
           <p>Flache, graue Schichtwolken. Sie bringen oft trübes Wetter und Nieselregen.</p>
+          <div class="card-footer">Trübes Wetter</div>
         </article>
 
         <article class="card">
+          <div class="card-icon">☁️☁️</div>
           <span>unter 2.000 m</span>
           <h3>Stratocumulus</h3>
           <p>Breite Wolkenfelder mit dunklen Stellen. Meist fällt nur wenig Niederschlag.</p>
+          <div class="card-footer">Wolkenfelder</div>
         </article>
 
         <article class="card">
+          <div class="card-icon">🌧️</div>
           <span>unter 2.000 m</span>
           <h3>Nimbostratus</h3>
           <p>Dicke Regenwolken. Sie bringen häufig langanhaltenden Regen oder Schnee.</p>
+          <div class="card-footer">Regenwolke</div>
         </article>
       </div>
     </section>
 
     <section class="height-group">
-      <h2>Vertikale Wolken</h2>
+      <div class="group-header">
+        <h2>⬆️ Vertikale Wolken</h2>
+        <p class="group-desc">Bis über 10.000 Meter - Entwickeln sich vertikal</p>
+      </div>
       <div class="cards">
-        <article class="card special">
+        <article class="card card-special">
+          <div class="card-icon">🌤️</div>
           <span>bis über 10.000 m</span>
           <h3>Cumulus</h3>
           <p>Weiße Haufenwolken mit klaren Konturen. Sie stehen oft für schönes Wetter.</p>
+          <div class="card-footer">Schönes Wetter</div>
         </article>
 
-        <article class="card storm">
+        <article class="card card-storm">
+          <div class="card-icon">⛈️</div>
           <span>bis über 12.000 m</span>
           <h3>Cumulonimbus</h3>
           <p>Gewaltige Gewitterwolken. Sie können Starkregen, Hagel, Blitz und Donner bringen.</p>
+          <div class="card-footer">Gewitter!</div>
         </article>
       </div>
     </section>
 
   </main>
 
+  <section class="info-section">
+    <h2>💡 Wissenswertes über Wolken</h2>
+    <div class="info-cards">
+      <div class="info-card">
+        <div class="info-icon">📈</div>
+        <h4>Höheneinteilung</h4>
+        <p>Wolken werden nach ihrer Höhe in drei Kategorien eingeteilt: hoch, mittel und tief.</p>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">💧</div>
+        <h4>Bildung</h4>
+        <p>Wolken entstehen durch Wasserdampf, der aufsteigt und in der Atmosphäre kondensiert.</p>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">🌡️</div>
+        <h4>Temperatur</h4>
+        <p>Je höher eine Wolke, desto kälter ist die Temperatur in dieser Höhe.</p>
+      </div>
+    </div>
+  </section>
+
   <footer>
-    <p>Wolkenarten einfach erklärt · Wetterkunde</p>
+    <p>☁️ Wolkenarten einfach erklärt · 🌍 Wetterkunde · Made with ❤️</p>
   </footer>
 
   <script src="script.js"></script>
